@@ -1,0 +1,41 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: #33a1fd;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 4rem;
+  font-family: "Comfortaa", cursive;
+}
+
+p {
+  color: #31393c;
+  font-size: 1.25rem;
+  margin: 5px;
+  font-family: "roboto", sans-serif;
+}
+
+p:hover {
+  cursor: default;
+  color: #000000;
+}
+
+.help {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
