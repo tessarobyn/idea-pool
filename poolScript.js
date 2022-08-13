@@ -1,16 +1,18 @@
-function addTab() {
-  const tabsBar = document.getElementById("tabs");
-  const container = document.createElement("div");
-  const text = document.createElement("p");
-  text.innerText = "tab";
-  container.appendChild(text);
-  tabsBar.insertBefore(
-    container,
-    tabsBar.children[tabsBar.childElementCount - 1]
-  );
-}
+import { AddTab, Tab } from "./tab.js";
 
-const addTabButton = document.getElementById("addTab");
-addTabButton.addEventListener("click", () => {
-  addTab();
+const addTabButton = new AddTab();
+addTabButton.add("+");
+
+const tabList = [];
+
+addTabButton.container.addEventListener("click", () => {
+  const tab = new Tab(tabList);
+  tab.add("tab");
 });
+
+for (let i = 0; i < tabList.length; i++) {
+  tabList[i].container.addEventListener("click"),
+    () => {
+      console.log("i was clicked!");
+    };
+}

@@ -4,6 +4,7 @@ body {
   width: 100%;
   height: 100%;
   font-size: 16px;
+  font-family: "roboto", sans-serif;
 }
 
 body {
@@ -47,7 +48,9 @@ h1 {
   background-color: #e4edfc;
   padding: 5px 10px 5px 10px;
   border-radius: 10px 10px 0px 0px;
-  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tabs .active {
@@ -62,10 +65,30 @@ h1 {
   background-color: #c7dbfd;
 }
 
-p,
-li {
+.tabs div input {
+  border-radius: 10px;
+  border-style: none;
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+button {
+  padding: 5px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #fdca40;
+  font-family: "roboto", sans-serif;
+}
+
+button:hover {
+  background-color: #ffbb00;
+}
+
+p {
   color: #31393c;
   font-size: 1.25rem;
   margin: 5px;
-  font-family: "roboto", sans-serif;
 }
