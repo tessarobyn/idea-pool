@@ -7,12 +7,5 @@ const tabList = [];
 
 addTabButton.container.addEventListener("click", () => {
   const tab = new Tab(tabList);
-  tab.add("tab");
+  tab.add();
 });
-
-for (let i = 0; i < tabList.length; i++) {
-  tabList[i].container.addEventListener("click"),
-    () => {
-      console.log("i was clicked!");
-    };
-}

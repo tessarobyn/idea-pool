@@ -68,6 +68,10 @@ h1 {
 .tabs div input {
   border-radius: 10px;
   border-style: none;
+  background-color: #e4edfc;
+  box-sizing: border-box;
+  height: 100%;
+  padding-left: 10px;
 }
 
 .closeButton:hover {

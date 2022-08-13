@@ -18,6 +18,12 @@ export class Tab {
       this.container.appendChild(this.delete);
     } else {
       this.container.appendChild(this.input);
+      this.input.placeholder = "add tab name";
+      this.input.addEventListener("keyup", (event) => {
+        if (event.key === "Enter") {
+          this.addName();
+        }
+      });
     }
     this.tabsBar.insertBefore(
       this.container,
@@ -51,7 +57,17 @@ export class Tab {
     });
   }
 
-  addName() {}
+  addName() {
+    if (this.input.value === "") {
+      this.name.innerText = "untitled";
+    } else {
+      this.name.innerText = this.input.value;
+    }
+    this.container.removeChild(this.input);
+    this.container.appendChild(this.name);
+    this.delete.style.fontSize = "1rem";
+    this.container.appendChild(this.delete);
+  }
 }
 
 export class AddTab extends Tab {
