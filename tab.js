@@ -1,14 +1,20 @@
+import { Page } from "./page.js";
 export class Tab {
   constructor(tabList) {
+    if (tabList) {
+      this.tabList = tabList;
+      this.id = this.tabList.length;
+      this.page;
+      this.delete = document.createElement("span");
+      this.delete.classList.add("material-icons");
+      this.delete.classList.add("closeButton");
+      this.delete.innerText = "close";
+      this.input = document.createElement("input");
+    }
+
     this.tabsBar = document.getElementById("tabs");
     this.container = document.createElement("div");
-    this.input = document.createElement("input");
     this.name = document.createElement("p");
-    this.delete = document.createElement("span");
-    this.delete.classList.add("material-icons");
-    this.delete.classList.add("closeButton");
-    this.delete.innerText = "close";
-    this.tabList = tabList;
   }
   add(name) {
     if (name) {
@@ -39,6 +45,9 @@ export class Tab {
     const index = this.tabList.indexOf(this);
     this.tabList.splice(index, 1);
     this.tabsBar.removeChild(this.container);
+    if (this.tabList.length === 0) {
+      this.page.reset();
+    }
   }
 
   setActive() {
@@ -46,6 +55,11 @@ export class Tab {
       this.tabList[i].container.classList.remove("active");
     }
     this.container.classList.add("active");
+    try {
+      if (this.tabList.length >= 2) {
+        this.page.load();
+      }
+    } catch {}
   }
 
   addEvents() {
@@ -55,6 +69,10 @@ export class Tab {
     this.container.addEventListener("click", () => {
       this.setActive();
     });
+  }
+
+  addPage() {
+    this.page = new Page(this.id);
   }
 
   addName() {
@@ -67,6 +85,7 @@ export class Tab {
     this.container.appendChild(this.name);
     this.delete.style.fontSize = "1rem";
     this.container.appendChild(this.delete);
+    this.addPage();
   }
 }
 
