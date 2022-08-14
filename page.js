@@ -12,12 +12,14 @@ export class Page {
     const grid = document.createElement("div");
     grid.classList.add("optionsGrid");
     const text = ["Cards", "Images", "Sticky Notes", "Whiteboard"];
+    const images = ["cards", "images", "stickyNotes", "whiteboard"];
     for (let i = 0; i < text.length; i++) {
       const option = document.createElement("div");
       const p = document.createElement("p");
       p.innerText = text[i];
       option.appendChild(p);
-      const icon = document.createElement("div");
+      const icon = document.createElement("img");
+      icon.src = "img/" + images[i] + "Thumbnail.PNG";
       icon.classList.add("icon");
       option.appendChild(icon);
       grid.appendChild(option);
@@ -27,18 +29,15 @@ export class Page {
   load() {
     this.setup();
   }
-  reset() {
-    console.log("here");
+
+  deleted() {
     this.container.innerText = "";
     this.id;
     const head = document.createElement("h2");
-    head.innerText = "Add a tab to get started";
+    head.innerText = "Tab deleted";
     this.container.appendChild(head);
     const p = document.createElement("p");
-    p.innerText = "Press the plus button in the top left";
+    p.innerText = "Choose one of your existing tabs or create a new one";
     this.container.appendChild(p);
-    const p2 = document.createElement("p");
-    p2.innerText = "Add a name to your tab when it appears";
-    this.container.appendChild(p2);
   }
 }

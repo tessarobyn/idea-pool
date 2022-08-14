@@ -45,9 +45,7 @@ export class Tab {
     const index = this.tabList.indexOf(this);
     this.tabList.splice(index, 1);
     this.tabsBar.removeChild(this.container);
-    if (this.tabList.length === 0) {
-      this.page.reset();
-    }
+    this.page.deleted();
   }
 
   setActive() {
@@ -56,7 +54,7 @@ export class Tab {
     }
     this.container.classList.add("active");
     try {
-      if (this.tabList.length >= 2) {
+      if (this.tabList.length > 0) {
         this.page.load();
       }
     } catch {}
