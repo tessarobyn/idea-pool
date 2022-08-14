@@ -3,6 +3,7 @@ export class Page {
     this.id = id;
     this.setup();
     this.cards = [];
+    this.notes = [];
   }
   setup() {
     this.container = document.getElementById("content");
@@ -82,18 +83,68 @@ export class Page {
     this.button.addEventListener("click", () => {
       this.addCard();
     });
-    this.container.classList.add("cardsContainer");
+    this.container.className = "cardsContainer";
     for (let i = 0; i < this.cards.length; i++) {
       this.container.appendChild(this.cards[i]);
     }
   }
 
-  setupImages() {
-    console.log("images coming soon!");
+  /*
+
+  startDrag(note, event) {
+    const ix = event.clientX;
+    const iy = event.clientY;
+    note.addEventListener("mousemove", (event) => {
+      if (this.dragging) {
+        this.dragNote(note, event, ix, iy);
+      }
+    });
+    note.addEventListener("mouseup", () => {
+      console.log("here");
+      this.dragging = false;
+    });
+  }
+
+  dragNote(note, event, ix, iy) {
+    const mouseX = ix - event.clientX;
+    const mouseY = iy - event.clientY;
+    note.style.top = note.offsetTop - mouseY + note.style.height + "px";
+    note.style.left = note.offsetLeft - mouseX + note.style.width + "px";
+  }
+  */
+
+  newStickyNote() {
+    const note = document.createElement("div");
+    /*
+    note.addEventListener("mousedown", (event) => {
+      this.dragging = true;
+      this.startDrag(note, event);
+    });
+    */
+    const input = document.createElement("textarea");
+    input.placeholder = "add content";
+    note.appendChild(input);
+    this.notes.push(note);
+    return note;
+  }
+
+  addStickyNote() {
+    this.container.appendChild(this.newStickyNote());
   }
 
   setupStickyNotes() {
-    console.log("sticky notes coming soon!");
+    this.setupAddButton();
+    this.button.addEventListener("click", () => {
+      this.addStickyNote();
+    });
+    this.container.className = "notesContainer";
+    for (let i = 0; i < this.notes.length; i++) {
+      this.container.appendChild(this.notes[i]);
+    }
+  }
+
+  setupImages() {
+    console.log("images coming soon!");
   }
 
   setupWhiteboard() {
