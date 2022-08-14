@@ -21,6 +21,9 @@ export class Page {
       const icon = document.createElement("img");
       icon.src = "img/" + images[i] + "Thumbnail.PNG";
       icon.classList.add("icon");
+      icon.addEventListener("click", () => {
+        newTabType();
+      });
       option.appendChild(icon);
       grid.appendChild(option);
     }

@@ -61,8 +61,9 @@ export class Tab {
   }
 
   addEvents() {
-    this.delete.addEventListener("click", () => {
+    this.delete.addEventListener("click", (event) => {
       this.remove();
+      event.stopImmediatePropagation();
     });
     this.container.addEventListener("click", () => {
       this.setActive();
