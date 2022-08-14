@@ -2,6 +2,7 @@ export class Page {
   constructor(id) {
     this.id = id;
     this.setup();
+    this.cards = [];
   }
   setup() {
     this.container = document.getElementById("content");
@@ -62,9 +63,9 @@ export class Page {
   newCard() {
     const card = document.createElement("div");
     const h3Input = document.createElement("input");
-    h3Input.placeholder = "add card name";
+    h3Input.placeholder = "add title";
     const p = document.createElement("textarea");
-    p.placeholder = "add card content";
+    p.placeholder = "add content";
     card.appendChild(h3Input);
     card.appendChild(p);
     card.classList.add("card");
@@ -78,11 +79,13 @@ export class Page {
 
   setupCards() {
     this.setupAddButton();
-    this.cards = [];
     this.button.addEventListener("click", () => {
       this.addCard();
     });
     this.container.classList.add("cardsContainer");
+    for (let i = 0; i < this.cards.length; i++) {
+      this.container.appendChild(this.cards[i]);
+    }
   }
 
   setupImages() {

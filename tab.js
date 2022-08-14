@@ -45,6 +45,7 @@ export class Tab {
     const index = this.tabList.indexOf(this);
     this.tabList.splice(index, 1);
     this.tabsBar.removeChild(this.container);
+    this.setActive();
     this.page.deleted();
   }
 
