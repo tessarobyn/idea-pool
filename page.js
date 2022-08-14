@@ -61,6 +61,12 @@ export class Page {
 
   newCard() {
     const card = document.createElement("div");
+    const h3Input = document.createElement("input");
+    h3Input.placeholder = "add card name";
+    const p = document.createElement("textarea");
+    p.placeholder = "add card content";
+    card.appendChild(h3Input);
+    card.appendChild(p);
     card.classList.add("card");
     this.cards.push(card);
     return card;
