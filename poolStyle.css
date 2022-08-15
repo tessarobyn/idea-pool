@@ -135,14 +135,18 @@ textarea {
   font-size: 1rem;
 }
 
-.notesContainer div {
+.notesContainer > div {
   position: absolute;
   width: 200px;
   height: 170px;
-  padding-top: 30px;
-  background-color: #fdf694;
   top: 200px;
   left: 500px;
+}
+
+.notesContainer div div {
+  width: 200px;
+  height: 30px;
+  background-color: #fdf694;
 }
 
 .notesContainer textarea {

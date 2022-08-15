@@ -89,7 +89,7 @@ export class Page {
     }
   }
 
-  startDrag(note, event) {
+  startDrag(note) {
     note.addEventListener("mousemove", (event) => {
       if (this.dragging) {
         this.dragNote(note, event);
@@ -110,25 +110,27 @@ export class Page {
 
   resizeNote(input, note) {
     note.style.width = input.style.width;
-    note.style.height = input.style.height;
   }
 
   newStickyNote() {
-    const note = document.createElement("div");
+    const noteContainer = document.createElement("div");
 
-    note.addEventListener("mousedown", (event) => {
+    const note = document.createElement("div");
+    note.addEventListener("mousedown", () => {
       this.dragging = true;
-      this.startDrag(note, event);
+      this.startDrag(noteContainer);
     });
+    noteContainer.appendChild(note);
 
     const input = document.createElement("textarea");
     input.placeholder = "add content";
     new ResizeObserver(() => {
       this.resizeNote(input, note);
     }).observe(input);
-    note.appendChild(input);
-    this.notes.push(note);
-    return note;
+    noteContainer.appendChild(input);
+
+    this.notes.push(noteContainer);
+    return noteContainer;
   }
 
   addStickyNote() {
