@@ -21,7 +21,7 @@ body {
   background-color: #2176ff;
 }
 
-.poolName {
+.title {
   float: right;
 }
 
@@ -63,7 +63,6 @@ h3 {
   list-style-type: none;
   padding: 10px;
   padding-bottom: 0;
-  border-bottom: 2px solid #31393c;
 }
 
 .tabs div {
@@ -73,14 +72,10 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #31393c;
-  border-bottom: none;
 }
 
 .tabs .active {
   background-color: #ffffff;
-  border-bottom: 5px solid #ffffff;
-  margin-bottom: -5px;
 }
 
 .tabs div:hover {
@@ -197,7 +192,6 @@ p {
   padding: 10px 20px 10px 20px;
   background-color: #fdca40;
   border-radius: 30px;
-  border: 2px solid #31393c;
 }
 
 .addButton:hover {

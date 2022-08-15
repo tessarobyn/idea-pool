@@ -38,6 +38,30 @@ p:hover {
   color: #000000;
 }
 
+input {
+  padding: 10px 20px 10px 20px;
+  font-size: 1rem;
+  font-family: "roboto", sans-serif;
+  border-radius: 30px;
+  border-style: none;
+  margin-right: 10px;
+}
+
+button {
+  font-family: "roboto", sans-serif;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px 10px 20px;
+  font-size: 1rem;
+  background-color: #fdca40;
+  border-radius: 30px;
+  border-style: none;
+}
+
+button:hover {
+  background-color: #ffbb00;
+}
+
 .help {
   position: absolute;
   bottom: 0;
