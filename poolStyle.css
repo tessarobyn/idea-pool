@@ -141,6 +141,8 @@ textarea {
   height: 170px;
   padding-top: 30px;
   background-color: #fdf694;
+  top: 200px;
+  left: 500px;
 }
 
 .notesContainer textarea {

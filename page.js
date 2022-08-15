@@ -89,29 +89,24 @@ export class Page {
     }
   }
 
-  /*
-
   startDrag(note, event) {
-    const ix = event.clientX;
-    const iy = event.clientY;
     note.addEventListener("mousemove", (event) => {
       if (this.dragging) {
-        this.dragNote(note, event, ix, iy);
+        this.dragNote(note, event);
       }
     });
-    note.addEventListener("mouseup", () => {
-      console.log("here");
+    document.body.addEventListener("mouseup", () => {
+      console.log(this.dragging);
       this.dragging = false;
     });
   }
 
-  dragNote(note, event, ix, iy) {
-    const mouseX = ix - event.clientX;
-    const mouseY = iy - event.clientY;
-    note.style.top = note.offsetTop - mouseY + note.style.height + "px";
-    note.style.left = note.offsetLeft - mouseX + note.style.width + "px";
+  dragNote(note, event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+    note.style.top = mouseY - 15 + "px";
+    note.style.left = mouseX - 15 + "px";
   }
-  */
 
   resizeNote(input, note) {
     note.style.width = input.style.width;
@@ -120,12 +115,11 @@ export class Page {
 
   newStickyNote() {
     const note = document.createElement("div");
-    /*
+
     note.addEventListener("mousedown", (event) => {
       this.dragging = true;
       this.startDrag(note, event);
     });
-    */
 
     const input = document.createElement("textarea");
     input.placeholder = "add content";
