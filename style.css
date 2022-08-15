@@ -20,6 +20,10 @@ h1 {
   color: #ffffff;
   font-size: 4rem;
   font-family: "Comfortaa", cursive;
+  padding-bottom: 2.5%;
+  width: 50%;
+  text-align: center;
+  border-bottom: 4px solid #ffffff;
 }
 
 p {
