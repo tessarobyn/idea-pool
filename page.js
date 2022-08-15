@@ -113,6 +113,11 @@ export class Page {
   }
   */
 
+  resizeNote(input, note) {
+    note.style.width = input.style.width;
+    note.style.height = input.style.height;
+  }
+
   newStickyNote() {
     const note = document.createElement("div");
     /*
@@ -121,8 +126,12 @@ export class Page {
       this.startDrag(note, event);
     });
     */
+
     const input = document.createElement("textarea");
     input.placeholder = "add content";
+    new ResizeObserver(() => {
+      this.resizeNote(input, note);
+    }).observe(input);
     note.appendChild(input);
     this.notes.push(note);
     return note;
