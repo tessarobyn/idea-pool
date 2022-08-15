@@ -10,7 +10,7 @@ export class Page {
     this.container.innerText = "";
     this.container.className = "content";
     const head = document.createElement("h2");
-    head.innerText = "Select tab type:" + String(this.id);
+    head.innerText = "Select tab type:";
     this.container.appendChild(head);
     const grid = document.createElement("div");
     grid.classList.add("optionsGrid");
