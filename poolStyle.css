@@ -1,0 +1,226 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: "roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.topBar1 {
+  background-color: #33a1fd;
+  overflow: hidden;
+}
+
+.topBar2 {
+  background-color: #2176ff;
+}
+
+.poolName {
+  float: right;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Comfortaa", cursive;
+}
+
+h1 {
+  float: left;
+  display: block;
+  color: #ffffff;
+  margin: 15px 25px 15px 25px;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2176ff;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  background-color: #33a1fd;
+  border-radius: 10px 10px 0 0;
+}
+
+.tabs {
+  display: flex;
+  column-gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.tabs div {
+  background-color: #e4edfc;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs .active {
+  background-color: #ffffff;
+}
+
+.tabs div:hover {
+  cursor: default;
+}
+
+.tabs div:hover:not(.active) {
+  background-color: #c7dbfd;
+}
+
+.tabs div input {
+  height: 100%;
+  padding-left: 10px;
+  background-color: #e4edfc;
+  border-radius: 10px;
+}
+
+.tabs div input::placeholder,
+textarea::placeholder {
+  color: #31393c;
+}
+
+input {
+  border-style: none;
+  border-radius: 10px 10px 0 0;
+  background-color: #f79824;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+input:not(.tabs div input) {
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+  height: 50px;
+  font-family: "comfortaa", cursive;
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: #ffffff;
+}
+
+textarea {
+  padding: 10px;
+  box-sizing: border-box;
+  border-style: none;
+  font-family: "roboto", sans-serif;
+}
+
+.cardsContainer textarea {
+  resize: none;
+  height: 200px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  background-color: #e4edfc;
+  font-size: 1rem;
+}
+
+.notesContainer > div {
+  position: absolute;
+  width: 200px;
+  height: 170px;
+  top: 200px;
+  left: 500px;
+}
+
+.notesContainer div div {
+  width: 200px;
+  height: 30px;
+  background-color: #fdf694;
+}
+
+.notesContainer textarea {
+  width: 200px;
+  height: 170px;
+  background-color: #fff023;
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+button {
+  padding: 5px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #fdca40;
+  font-family: "roboto", sans-serif;
+}
+
+button:hover {
+  background-color: #ffbb00;
+}
+
+p {
+  text-align: center;
+  color: #31393c;
+  font-size: 1.1rem;
+  margin: 5px;
+}
+
+.content:not(.notesContainer, .cardsContainer) {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionsGrid {
+  width: 30%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.icon {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.addButton {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 2rem;
+  padding: 10px 20px 10px 20px;
+  border-radius: 30px;
+}
+
+.cardsContainer {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.card {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
