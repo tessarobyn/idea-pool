@@ -14,8 +14,8 @@ export class Page {
     this.container.appendChild(head);
     const grid = document.createElement("div");
     grid.classList.add("optionsGrid");
-    const text = ["Cards", "Images", "Sticky Notes", "Whiteboard"];
-    const images = ["cards", "images", "stickyNotes", "whiteboard"];
+    const text = ["Cards", "Sticky Notes"];
+    const images = ["cards", "stickyNotes"];
     for (let i = 0; i < text.length; i++) {
       const option = document.createElement("div");
       const p = document.createElement("p");
@@ -146,14 +146,6 @@ export class Page {
     for (let i = 0; i < this.notes.length; i++) {
       this.container.appendChild(this.notes[i]);
     }
-  }
-
-  setupImages() {
-    console.log("images coming soon!");
-  }
-
-  setupWhiteboard() {
-    console.log("whiteboard coming soon!");
   }
 
   setupTabType() {
