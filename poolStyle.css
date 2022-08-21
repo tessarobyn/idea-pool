@@ -15,14 +15,29 @@ body {
 .topBar1 {
   background-color: #33a1fd;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .topBar2 {
   background-color: #2176ff;
 }
 
+.saveButton {
+  font-size: 1rem;
+  padding: 10px 20px 10px 20px;
+  background-color: #fdca40;
+  border-radius: 30px;
+  border-style: none;
+}
+
+.saveButton:hover {
+  background-color: #ffbb00;
+}
+
 .title {
-  float: right;
+  flex: 1;
+  text-align: right;
 }
 
 h1,
