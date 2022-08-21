@@ -192,6 +192,7 @@ p {
   padding: 10px 20px 10px 20px;
   background-color: #fdca40;
   border-radius: 30px;
+  border-style: none;
 }
 
 .addButton:hover {

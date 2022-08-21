@@ -90,7 +90,7 @@ export class Page {
   }
 
   startDrag(note) {
-    note.addEventListener("mousemove", (event) => {
+    document.body.addEventListener("mousemove", (event) => {
       if (this.dragging) {
         this.dragNote(note, event);
       }
