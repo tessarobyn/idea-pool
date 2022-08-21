@@ -15,14 +15,29 @@ body {
 .topBar1 {
   background-color: #33a1fd;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .topBar2 {
   background-color: #2176ff;
 }
 
-.poolName {
-  float: right;
+.saveButton {
+  font-size: 1rem;
+  padding: 10px 20px 10px 20px;
+  background-color: #fdca40;
+  border-radius: 30px;
+  border-style: none;
+}
+
+.saveButton:hover {
+  background-color: #ffbb00;
+}
+
+.title {
+  flex: 1;
+  text-align: right;
 }
 
 h1,
@@ -37,6 +52,11 @@ h1 {
   color: #ffffff;
   margin: 15px 25px 15px 25px;
   font-size: 2.5rem;
+}
+
+h1 a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 h2 {
@@ -63,7 +83,6 @@ h3 {
   list-style-type: none;
   padding: 10px;
   padding-bottom: 0;
-  border-bottom: 2px solid #31393c;
 }
 
 .tabs div {
@@ -73,14 +92,10 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #31393c;
-  border-bottom: none;
 }
 
 .tabs .active {
   background-color: #ffffff;
-  border-bottom: 5px solid #ffffff;
-  margin-bottom: -5px;
 }
 
 .tabs div:hover {
@@ -197,7 +212,7 @@ p {
   padding: 10px 20px 10px 20px;
   background-color: #fdca40;
   border-radius: 30px;
-  border: 2px solid #31393c;
+  border-style: none;
 }
 
 .addButton:hover {

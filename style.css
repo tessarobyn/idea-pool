@@ -20,6 +20,10 @@ h1 {
   color: #ffffff;
   font-size: 4rem;
   font-family: "Comfortaa", cursive;
+  padding-bottom: 2.5%;
+  width: 50%;
+  text-align: center;
+  border-bottom: 4px solid #ffffff;
 }
 
 p {
@@ -32,6 +36,30 @@ p {
 p:hover {
   cursor: default;
   color: #000000;
+}
+
+input {
+  padding: 10px 20px 10px 20px;
+  font-size: 1rem;
+  font-family: "roboto", sans-serif;
+  border-radius: 30px;
+  border-style: none;
+  margin-right: 10px;
+}
+
+button {
+  font-family: "roboto", sans-serif;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px 10px 20px;
+  font-size: 1rem;
+  background-color: #fdca40;
+  border-radius: 30px;
+  border-style: none;
+}
+
+button:hover {
+  background-color: #ffbb00;
 }
 
 .help {
