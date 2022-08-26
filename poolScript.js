@@ -16,3 +16,7 @@ addTabButton.container.addEventListener("click", () => {
   const tab = new Tab(tabList);
   tab.add();
 });
+
+window.onbeforeunload = () => {
+  return "Are you sure you want to leave? Your data will not be saved";
+};
